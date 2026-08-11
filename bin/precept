@@ -10,7 +10,7 @@ PRECEPTS="$DIR/precepts.txt"
 
 cat <<'EOF'
 
-  \333\236   THE IHSAN HARNESS   \333\236
+  ۞   THE IHSAN HARNESS   ۞
 
   "Work as though you see Him;
    and though you see Him not, He sees you."
@@ -25,6 +25,6 @@ if [ -f "$PRECEPTS" ]; then
     [ -z "$DAY" ] && DAY=0
     IDX=$(( (DAY % N) + 1 ))
     P=$(sed -n "${IDX}p" "$PRECEPTS")
-    [ -n "$P" ] && printf '\n  \333\236 %s\n\n' "$P"
+    [ -n "$P" ] && printf '\n  ۞ %s\n\n' "$P"
   fi
 fi
