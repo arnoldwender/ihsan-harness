@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="The Ihsan Harness — a conduct codex for AI coding agents" width="100%">
+</p>
+
 # The Ihsan Harness
 
 **A short conduct codex for autonomous coding agents — the four disciplines of clean work, skinned as the Islamic ethic of craft and character, under one crown virtue: *ihsan*, to do a thing beautifully and with mastery, as if seen.**
