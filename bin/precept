@@ -1,0 +1,30 @@
+#!/usr/bin/env sh
+# The first utterance of the Ihsan Harness. Wire this as your harness startup
+# banner so it is the first thing emitted, before any agent acts.
+#   - A fixed precept (the measure of ihsan) prints first.
+#   - Below it, a rotating "precept of the day" from precepts.txt — the Qur'an
+#     (Pickthall 1930), classical hadith, and the classical sages, all in
+#     verified public-domain translations. Edit precepts.txt to curate. See PRECEPTS.md.
+DIR=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+PRECEPTS="$DIR/precepts.txt"
+
+cat <<'EOF'
+
+  \333\236   THE IHSAN HARNESS   \333\236
+
+  "Work as though you see Him;
+   and though you see Him not, He sees you."
+                — after the Hadith of Gabriel
+EOF
+
+# --- Rotating precept of the day, from precepts.txt ---
+if [ -f "$PRECEPTS" ]; then
+  N=$(grep -c . "$PRECEPTS")
+  if [ "$N" -gt 0 ]; then
+    DAY=$(date +%j | sed 's/^0*//')
+    [ -z "$DAY" ] && DAY=0
+    IDX=$(( (DAY % N) + 1 ))
+    P=$(sed -n "${IDX}p" "$PRECEPTS")
+    [ -n "$P" ] && printf '\n  \333\236 %s\n\n' "$P"
+  fi
+fi

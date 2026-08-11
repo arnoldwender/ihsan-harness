@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use or adapt the Ihsan Codex, please cite it."
+title: "The Ihsan Codex"
+abstract: >-
+  A conduct codex for autonomous AI coding agents, skinned as the Islamic ethic
+  of craft and character — four virtues (Adab, Hikmah, Sidq, Sabr) under the crown
+  of ihsan (excellence), each rule carrying an observable falsifier. Offered with
+  respect. Part of a small family of conduct harnesses.
+type: dataset
+authors:
+  - family-names: Wender
+    given-names: Arnold
+version: "1.0"
+date-released: "2026-08-11"
+license: CC-BY-4.0
+repository-code: "https://github.com/arnoldwender/ihsan-harness"
+keywords:
+  - AI agents
+  - agent harness
+  - conduct codex
+  - prompt engineering
+  - agent alignment
