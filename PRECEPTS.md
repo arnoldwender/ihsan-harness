@@ -33,4 +33,16 @@ per line) to curate or extend the pool. All sources are verified public-domain. 
 > - Knowledge of self is the key to the knowledge of God. — Al-Ghazali, The Alchemy of Happiness (tr. Claud Field, 1910)
 > - Have patience, for patience is the key of joy. — Rumi, Masnavi, Book I (tr. E.H. Whinfield, 1898)
 
+## Quoted elsewhere in the repo
+
+Lines that appear outside the rotation, listed so each has a source on record.
+
+> - *Is the reward of goodness aught save goodness?* — Qur'an 55:60 (Ar-Rahman), Pickthall, *The Meaning of the Glorious Koran* (1930). The epigraph under the title in [README.md](README.md).
+> - *It is to worship God as though you see Him; and though you see Him not, yet He sees you.* — the Hadith of Gabriel (Sahih al-Bukhari 50; Sahih Muslim 8). The rendering used in [CODEX.md](CODEX.md).
+
+The harness's own fixed precept — *Work as though you see Him; and though you see Him not,
+He sees you* — is an adaptation of that hadith to the craft, and is marked *after the Hadith
+of Gabriel* wherever it appears. It is not offered as a translation. The pool line above from
+Suhrawardy (1905) is the public-domain translation proper.
+
 *The harness emits this first, on startup — [`bin/precept`](bin/precept).*
