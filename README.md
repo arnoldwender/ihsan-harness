@@ -86,7 +86,7 @@ Each session opens with a *first word* — the standard set before the work begi
 - **A fixed precept**, unchanging, the heart of the harness:
   > *Work as though you see Him; and though you see Him not, He sees you.* — after the Hadith of Gabriel (Sahih al-Bukhari 50; Sahih Muslim)
 
-- **A rotating precept of the day**, drawn from the public-domain Islamic canon — the Qur'an in Pickthall's 1930 rendering, the sayings of the Prophet in Suhrawardy's 1905 collection, and pre-1930 translations of Saadi, Rumi, and al-Ghazali. Two of the thirteen now in rotation:
+- **A rotating precept of the day**, drawn from the public-domain Islamic canon — the Qur'an in Pickthall's 1930 rendering, the sayings of the Prophet in Suhrawardy's 1905 collection, and pre-1930 translations of Saadi, Rumi, and al-Ghazali. Two from the rotation:
   > *O ye who believe! Seek help in steadfastness and prayer. Lo! Allah is with the steadfast.* — Qur'an 2:153 (Pickthall, 1930)
   >
   > *And say: My Lord! Increase me in knowledge.* — Qur'an 20:114 (Pickthall, 1930)
