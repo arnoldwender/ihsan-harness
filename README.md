@@ -23,7 +23,7 @@ Every rule here is written twice.
 
 The Arabic is the mnemonic; the falsifier is the mechanism. They point at the same act.
 
-### The four disciplines
+## The four disciplines
 
 **1 — ADAB · أدب · proper conduct, good manners, leaving things in right order**
 *What you leave behind.* Heal what you touch in passing, but cleanup serves the task — never itself. Change only what you understand; trace a change's dependents before you make it. A fix that grows past its scope gets split out and flagged, not smuggled in.
@@ -89,3 +89,9 @@ Early, but real.
 - **Written and stable:** the four disciplines, their rules, and every falsifier; the precedence order; this README.
 - **Shipping:** the wiring — the session-start hook and the *first word* precept rotation (PRECEPTS.md).
 - **Stated plainly:** this is a young codex, offered as a standard to hold rather than a finished framework. In the spirit of *sidq*, that is named here rather than dressed up.
+
+## License
+
+**MIT** — see [LICENSE](LICENSE). A [`CITATION.cff`](CITATION.cff) (CC-BY-4.0) gives the
+citable form. MIT keeps the one thing that actually protects users — the liability
+disclaimer — while letting the codex be pasted anywhere without attribution friction.
