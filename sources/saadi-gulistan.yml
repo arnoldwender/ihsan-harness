@@ -1,0 +1,26 @@
+# The Bani Adam lines, Gulistan chapter I, story 10. Verified 2026-09-10 against
+# the full text of Rehatsek's translation on Internet Archive, matched with
+# punctuation ignored, because Rehatsek sets it as four lines of verse:
+#
+#   The sons of Adam are limbs of each other
+#   Having been created of one essence.
+#   When the calamity of time afflicts one limb
+#   The other limbs cannot remain at rest.
+#
+# The repo prints it as one prose sentence. Every word is Rehatsek's and in his
+# order; the comma and the semicolon that join the lines are the repo's, and
+# that is the only difference.
+work: "The Gulistan or Rose Garden of Sa'di, chapter I, story 10"
+author: "Sa'di of Shiraz"
+author_born: 1210
+author_died: 1292
+year: 1258
+edition: "Persian written 1258. English from Edward Rehatsek's translation, Kama Shastra Society, Benares, 1888."
+translator: "Edward Rehatsek"
+translator_died: 1891
+pd_status_us: "Published 1258; the Rehatsek translation 1888, before 1930 - public domain."
+pd_status_eu: "Author died 1292. Translator Edward Rehatsek died 11 December 1891; 1891 + 70 = 1961 - public domain."
+source_url: "https://archive.org/details/TheGulistanOrRoseGardenOfSadi-EdwardRehatsek"
+provenance: verified
+quotes:
+  - "The sons of Adam are limbs of each other, having been created of one essence; when the calamity of time afflicts one limb, the other limbs cannot remain at rest."

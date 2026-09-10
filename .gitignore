@@ -8,3 +8,6 @@ node_modules/
 # The test suite is Python; its caches are build output, not source.
 __pycache__/
 .pytest_cache/
+
+# SARIF the gate writes locally; CI keeps its copy as a build artefact
+*.sarif

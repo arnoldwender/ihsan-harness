@@ -1,0 +1,26 @@
+# CITED WITHOUT A NUMBER, like its neighbour. Located 2026-09-10 and the numbers
+# added: Sahih al-Bukhari 6094 and Sahih Muslim 2607, narrated by Abdullah ibn
+# Mas'ud, in Bukhari's Book of Good Manners under the chapter heading taken from
+# Qur'an 9:119 - which is itself one of the lines in this repo's own pool.
+#
+# The English is where it comes apart. Sunnah.com's text reads:
+#   "Truthfulness leads to righteousness, and righteousness leads to Paradise."
+# The repo reads "the Garden". That is a real and defensible rendering of
+# al-janna, used in several literary translations - and it is not the word in
+# any published edition located for this hadith. A one-word substitution inside
+# quotation marks, under a collection name, is a small thing that the repo's own
+# sidq rule 2 forbids: carry the word unchanged, do not improve it.
+work: "Sahih al-Bukhari 6094 and Sahih Muslim 2607"
+author: "The Prophet Muhammad, as transmitted by Abdullah ibn Mas'ud"
+author_born: 570
+author_died: 632
+year: 846
+posthumous: true
+edition: "Sahih al-Bukhari, completed c. 846 CE (232 AH), Book 78 - Good Manners and Form; Sahih Muslim, c. 875 CE."
+pd_status_us: "The 9th-century Arabic is public domain. The English rendering has no identified translator, so no term can be computed for it."
+pd_status_eu: "The Arabic is public domain everywhere. The English rendering has no identified translator, so its EU status cannot be established."
+source_url: "https://sunnah.com/bukhari:6094"
+provenance: unverified
+provenance_note: "Locus located and added to the codex, which cited two collections and no number. What could NOT be confirmed is the English: published editions read 'righteousness leads to Paradise' and the repo reads 'the Garden'. The substitution is a defensible rendering of al-janna but belongs to no located edition, so the line is a paraphrase rather than a quotation. The Prophet's birth year of 570 is traditional."
+quotes:
+  - "Truthfulness leads to righteousness, and righteousness leads to the Garden."
