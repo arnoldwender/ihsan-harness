@@ -1,0 +1,24 @@
+# Cheap-rescue allowlist — the justified exception, written down.
+#
+# One Python regular expression per line. An entry exempts a finding when it
+# matches the file path (repo-relative, forward slashes) OR the offending line
+# itself. Blank lines and lines starting with `#` are ignored. A malformed
+# regex here is exit 2, not a warning: a gate running on a config it could not
+# parse does not know what it is exempting.
+#
+# The point of this file is that it exists at all. A gate with no escape hatch
+# gets switched off wholesale the first time it is wrong, and that decision is
+# taken once, in a hurry, by whoever is most annoyed. An exemption written here
+# is specific, reviewable in the same diff as the code it excuses, and it keeps
+# the rest of the gate alive.
+#
+# Keep it small. Every line here is a promise that somebody looked.
+
+# --- this repo's own files -----------------------------------------------
+# The gate and its tests quote every token they hunt: the docstring lists
+# `@ts-ignore` and `# noqa` as examples, and the tests plant them on purpose.
+# Without these two lines the gate reports itself on the very commit that adds
+# it — the classic self-detecting falsifier. Scoped to these exact two paths,
+# never to `gate/` or `tests/` wholesale.
+^gate/cheap_rescue\.py$
+^tests/test_cheap_rescue\.py$
