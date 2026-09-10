@@ -1,0 +1,36 @@
+# CITED WITHOUT A NUMBER, WHICH IS THE FINDING.
+#
+# The codex carried this as "- Sahih al-Bukhari & Sahih Muslim" and nothing
+# more. Two collections and no number is not a citation a reader can check:
+# Sahih al-Bukhari alone runs to over seven thousand narrations. Located
+# 2026-09-10 and the numbers added.
+#
+# The clause belongs to the "every joint of a person owes a charity" hadith,
+# narrated by Abu Hurayra: Sahih al-Bukhari 2989 and Sahih Muslim 1009, and it
+# is also the twenty-sixth of al-Nawawi's Forty. Sunnah.com renders the clause
+# "and removing a harmful object from the road is a charity".
+#
+# There is a NEARBY hadith that is not this one and is easy to conflate with it:
+# the branches-of-faith narration (Sahih al-Bukhari 9, Sahih Muslim 35), where
+# removing harm from the road is the LOWEST BRANCH OF FAITH rather than an act
+# of charity. The repo's wording says charity, so the sadaqa narration is the
+# right locus. The near-miss is recorded because a reader checking this line
+# will meet the other one first.
+#
+# The English is a separate question from the locus, and it is not settled: the
+# repo's sentence matches no located published translation, and the nearest one
+# (Muhsin Khan, on sunnah.com) is under copyright.
+work: "Sahih al-Bukhari 2989 and Sahih Muslim 1009; al-Nawawi's Forty Hadith 26"
+author: "The Prophet Muhammad, as transmitted by Abu Hurayra"
+author_born: 570
+author_died: 632
+year: 846
+posthumous: true
+edition: "Sahih al-Bukhari, completed c. 846 CE (232 AH); Sahih Muslim, c. 875 CE."
+pd_status_us: "The 9th-century Arabic is public domain. The English rendering has no identified translator, so no term can be computed for it."
+pd_status_eu: "The Arabic is public domain everywhere. The English rendering has no identified translator, so its EU status cannot be established."
+source_url: "https://sunnah.com/bukhari:2989"
+provenance: unverified
+provenance_note: "Locus located and added to the codex, which cited two collections and no number. What could NOT be confirmed is the English: the repo reads 'The removing of what is harmful from the road is an act of charity', where the Muhsin Khan text on sunnah.com reads 'removing a harmful object from the road is a charity' inside the longer sadaqa narration. The repo's sentence matches no located published translation, and Muhsin Khan's is in copyright. The Prophet's birth year of 570 is traditional."
+quotes:
+  - "The removing of what is harmful from the road is an act of charity."

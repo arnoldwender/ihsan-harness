@@ -30,7 +30,7 @@ per line) to curate or extend the pool. All sources are verified public-domain. 
 > - God is gentle and loveth gentleness. — Prophet Muhammad, in Suhrawardy, The Sayings of Muhammad (1905)
 > - Adore God as thou wouldst if thou sawest Him; for, if thou seest Him not, He seeth thee. — Prophet Muhammad, in Suhrawardy, The Sayings of Muhammad (1905)
 > - The sons of Adam are limbs of each other, having been created of one essence; when the calamity of time afflicts one limb, the other limbs cannot remain at rest. — Saadi, Gulistan (tr. Rehatsek, 1888)
-> - Knowledge of self is the key to the knowledge of God. — Al-Ghazali, The Alchemy of Happiness (tr. Claud Field, 1910)
+> - Knowledge of self is the key to the knowledge of God. — Al-Ghazali, The Alchemy of Happiness (tr. Claud Field, 1909)
 > - Have patience, for patience is the key of joy. — Rumi, Masnavi, Book I (tr. E.H. Whinfield, 1898)
 
 ## Quoted elsewhere in the repo
@@ -44,5 +44,27 @@ The harness's own fixed precept — *Work as though you see Him; and though you 
 He sees you* — is an adaptation of that hadith to the craft, and is marked *after the Hadith
 of Gabriel* wherever it appears. It is not offered as a translation. The pool line above from
 Suhrawardy (1905) is the public-domain translation proper.
+
+## Where each line comes from
+
+Every attributed quotation in this repo has a provenance file in [`sources/`](sources/)
+carrying the work, the author's and translator's dates, a checkable URL, and public-domain
+status **per jurisdiction**; [`gate/citations.py`](gate/citations.py) refuses any quotation
+that does not resolve to one. Measured 2026-09-10, and the result is not uniform:
+
+- **The rotating pool is clean.** All thirteen lines were matched word for word against the
+  editions they name — the seven Qur'an verses against Pickthall's 1930 text, the five sayings
+  against Suhrawardy's 1905 collection *by saying number* (146, 198, 289, 401, 402), and Saadi,
+  al-Ghazali and Rumi against the Rehatsek, Field and Whinfield scans. Every one of those
+  translations is public domain in both the US and the EU.
+- **One date was wrong.** Field's *Alchemy of Happiness* was published in **1909**, not 1910.
+  Corrected here and in [`precepts.txt`](precepts.txt).
+- **The three hadith renderings outside the pool are paraphrases, not quotations.** The English
+  used in [CODEX.md](CODEX.md) for the Hadith of Gabriel, for the harm-on-the-road hadith and
+  for the truthfulness hadith matches no published translation that could be located, and the
+  nearest published ones are under copyright. The collection numbers are now given so a reader
+  can check the Arabic; the English is marked `provenance: unverified` with a note saying what
+  the published editions actually read. For the ihsan clause the free, attributable English is
+  Suhrawardy 146, which is already in the pool above.
 
 *The harness emits this first, on startup — [`bin/precept`](bin/precept).*

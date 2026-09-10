@@ -1,0 +1,43 @@
+# Five sayings, all verbatim, all located BY NUMBER in the 1905 collection.
+#
+# Verified 2026-09-10 against the full text of the scan on Internet Archive
+# (item the-sayings-of-muhammad_202401), searched with whitespace normalisation
+# so an OCR line break could not produce a false miss:
+#
+#   146  "Adore God as thou wouldst if thou sawest Him; for, if thou seest Him
+#         not, He seeth thee."
+#   198  "God is gentle and loveth gentleness."
+#   289  "The acquisition of knowledge is a duty incumbent on every Muslim,
+#         male and female."
+#   401  "No man is true in the truest sense of the word but he who is true in
+#         word, in deed, and in thought."
+#   402  "Strive always to excel in virtue and truth."
+#
+# Saying 146 is the public-domain rendering of the ihsan clause of the Hadith of
+# Gabriel. That matters: the wording used in CODEX.md for the same hadith is NOT
+# from any located edition (see hadith-of-gabriel.yml), and this one is. If a
+# free, attributable English is ever wanted for that line, it is here.
+#
+# Suhrawardy's dates: the Wikipedia article gives 31 May 1877 - 13 January 1935;
+# the Internet Archive catalogue record gives 1882-1935. The death year, which
+# is the one the copyright arithmetic needs, agrees in both.
+work: "The Sayings of Muhammad, sayings 146, 198, 289, 401 and 402"
+author: "The Prophet Muhammad, as collected by Abdullah al-Mamun al-Suhrawardy"
+author_born: 570
+author_died: 632
+year: 1905
+posthumous: true
+edition: "Abdullah al-Mamun al-Suhrawardy, The Sayings of Muhammad, first published February 1905, London."
+translator: "Abdullah al-Mamun al-Suhrawardy"
+translator_died: 1935
+pd_status_us: "Published 1905, before 1930 - public domain."
+pd_status_eu: "The sayings themselves are 7th-century. Translator and compiler Abdullah al-Mamun al-Suhrawardy died 13 January 1935; 1935 + 70 = 2005, so this collection has been public domain in the EU since 1 January 2006."
+source_url: "https://archive.org/details/the-sayings-of-muhammad_202401"
+provenance: verified
+provenance_note: "The Prophet's birth year of 570 is the traditional date and is recorded as tradition, not as measurement; the death year 632 is firm. The collection is posthumous by twelve centuries, which is declared rather than left for the gate to trip over."
+quotes:
+  - "Adore God as thou wouldst if thou sawest Him; for, if thou seest Him not, He seeth thee."
+  - "God is gentle and loveth gentleness."
+  - "The acquisition of knowledge is a duty incumbent on every Muslim, male and female."
+  - "No man is true in the truest sense of the word but he who is true in word, in deed, and in thought."
+  - "Strive always to excel in virtue and truth."

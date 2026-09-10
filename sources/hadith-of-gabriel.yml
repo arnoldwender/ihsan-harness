@@ -1,0 +1,44 @@
+# THE LOCUS IS CERTAIN. THE ENGLISH IS NOT ANYBODY'S.
+#
+# The Hadith of Gabriel is Sahih al-Bukhari 50 and Sahih Muslim 8, and the ihsan
+# clause is the best-known sentence in either collection. That much is settled.
+#
+# What could not be settled on 2026-09-10 is the English printed in CODEX.md:
+#   "It is to worship God as though you see Him; and though you see Him not,
+#    yet He sees you."
+# It matches no located published translation. The renderings that were checked:
+#   Muhsin Khan  "To worship Allah as if you see Him, and if you cannot achieve
+#                 this state of devotion then you must consider that He is
+#                 looking at you."
+#   Murata and Chittick  "Doing what is beautiful means that you should worship
+#                 God as if you see Him, for even if you do not see Him, He
+#                 sees you."
+#   Yaqeen       "Excellence is to worship Allah as if you see Him, for though
+#                 you do not see Him, He surely sees you."
+# None is the repo's sentence. It reads as a composite - which is not a lie, but
+# it is not a quotation from an edition either, and it is printed inside
+# quotation marks with a collection and a number after it, which says it is.
+#
+# The two modern translations above are also under copyright, so "just use one of
+# them" is not free either. The public-domain answer already exists inside this
+# repo: Suhrawardy 146, in suhrawardy-sayings-of-muhammad.yml.
+#
+# PRECEPTS.md already handles the harness's OWN fixed precept correctly - it is
+# marked "after the Hadith of Gabriel" and explicitly says it is not offered as
+# a translation. That is the right treatment, and it is why the fixed precept is
+# not the finding here. The CODEX.md line is, because it is not marked "after".
+work: "Sahih al-Bukhari 50 and Sahih Muslim 8 - the Hadith of Gabriel, the ihsan clause"
+author: "The Prophet Muhammad, as transmitted by Umar ibn al-Khattab"
+author_born: 570
+author_died: 632
+year: 846
+posthumous: true
+edition: "Sahih al-Bukhari, completed c. 846 CE (232 AH); Sahih Muslim, c. 875 CE. The Arabic is canonical and fixed; the English quoted in CODEX.md corresponds to no located edition."
+pd_status_us: "The 9th-century Arabic is public domain. The English rendering has no identified translator, so no term can be computed for it. Muhsin Khan and Murata-Chittick, the two nearest published renderings, are both in copyright."
+pd_status_eu: "The Arabic is public domain everywhere. The English rendering has no identified translator, so its EU status cannot be established."
+source_url: "https://sunnah.com/bukhari:50"
+provenance: unverified
+provenance_note: "Collection and hadith numbers confirmed (Sahih al-Bukhari 50; Sahih Muslim 8). What could NOT be confirmed is the English wording used in CODEX.md - it matches none of Muhsin Khan, Murata and Chittick, or the Yaqeen rendering, and no published edition carrying it was located. It should be read as a composite paraphrase, and the free attributable alternative is Suhrawardy 146. The Prophet's birth year of 570 is traditional."
+quotes:
+  - "It is to worship God as though you see Him; and though you see Him not, yet He sees you."
+  - "Work as though you see Him; and though you see Him not, He sees you."

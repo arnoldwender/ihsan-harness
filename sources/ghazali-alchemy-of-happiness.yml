@@ -1,0 +1,36 @@
+# THE DATE IN THE POOL WAS WRONG BY A YEAR, AND THAT IS WHY THIS FILE EXISTS.
+#
+# precepts.txt and PRECEPTS.md both read "(tr. Claud Field, 1910)". Claud Field's
+# translation of the Alchemy of Happiness was first published in 1909, in John
+# Murray's Wisdom of the East series, London. Measured 2026-09-10 two ways that
+# do not share a source: the Forgotten Books facsimile carries "First published
+# 1909" on its own reprint page, and the widely mirrored electronic text carries
+# "CLAUD FIELD, translator [b. 1863, d. 1941] [1909]" in its header.
+#
+# One year is a small error and it is exactly the class of error this gate was
+# built for. "Sir Edwin Arnold, The Song Celestial (1885)" is wrong because
+# Arnold was knighted in 1888; "Newton, Principia (1687), Rule I" is wrong
+# because that passage is Regula I only from 1713. Nobody catches any of the
+# three by reading. They are caught by looking the edition up.
+#
+# Corrected to 1909 in precepts.txt and PRECEPTS.md on 2026-09-10.
+#
+# The quotation itself is verbatim. Field's chapter I opens:
+#   "KNOWLEDGE of self is the key to the knowledge of God, according to the
+#    saying: He who knows himself knows God"
+work: "The Alchemy of Happiness, chapter I - The Knowledge of Self"
+author: "Abu Hamid al-Ghazali"
+author_born: 1058
+author_died: 1111
+year: 1909
+edition: "Persian Kimiya-yi Sa'adat, c. 1105. English from Claud Field, The Alchemy of Happiness, John Murray, Wisdom of the East series, London, 1909 - NOT 1910, which is what the pool said until this file was written."
+translator: "Claud Field"
+translator_died: 1941
+posthumous: true
+pd_status_us: "The Persian original c. 1105; the Field translation 1909, before 1930 - public domain."
+pd_status_eu: "Author died 1111. Translator Claud Field died 1941; 1941 + 70 = 2011, so the English has been public domain in the EU since 1 January 2012."
+source_url: "https://en.wikisource.org/wiki/The_Alchemy_of_Happiness_(Field)"
+provenance: verified
+provenance_note: "Quotation verbatim. The finding on this entry is the edition YEAR, which read 1910 and is 1909, and which has now been corrected in the pool and its document."
+quotes:
+  - "Knowledge of self is the key to the knowledge of God."

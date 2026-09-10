@@ -91,7 +91,7 @@ Each session opens with a *first word* — the standard set before the work begi
   >
   > *And say: My Lord! Increase me in knowledge.* — Qur'an 20:114 (Pickthall, 1930)
 
-The full rotation lives in [`PRECEPTS.md`](PRECEPTS.md) and in [`precepts.txt`](precepts.txt), every entry attributed and verified public-domain.
+The full rotation lives in [`PRECEPTS.md`](PRECEPTS.md) and in [`precepts.txt`](precepts.txt), every entry attributed and verified public-domain — verified, not asserted: each line has a provenance file in [`sources/`](sources/) recording the edition it was matched against, the translator's dates and the public-domain arithmetic for the US and the EU separately, and [`gate/citations.py`](gate/citations.py) refuses any quotation in this repo that does not resolve to one. What that measurement found, including the three lines it could *not* confirm, is written out in [PRECEPTS.md](PRECEPTS.md#where-each-line-comes-from) rather than smoothed away — *sidq* applies to the repo's own citations first.
 
 ## The gate — [`gate/cheap_rescue.py`](gate/cheap_rescue.py)
 
@@ -140,7 +140,7 @@ Early, but real.
 
 - **Written and stable:** the four disciplines, their rules, and every falsifier ([CODEX.md](CODEX.md)); the precedence order; this README.
 - **Shipping:** the wiring — the session-start hook and the *first word* precept rotation ([PRECEPTS.md](PRECEPTS.md)).
-- **Automated:** the cheap-rescue gate, in CI on every push, with a mutation check behind it.
+- **Automated:** the cheap-rescue gate, in CI on every push, with a mutation check behind it. Alongside it, [`gate/citations.py`](gate/citations.py) — the one piece of gate logic shared verbatim across the conduct-harness family, because a fabricated citation is the same defect in every idiom — refuses any attributed quotation here that does not resolve to a provenance file in [`sources/`](sources/).
 - **Reported straight, as *sidq* demands:** **one of the four disciplines has an executable falsifier; three do not.** The gate covers *sabr* 3 in full, and clips the edge of two neighbours — a force push is *hikmah* 2 (minimum force), `continue-on-error: true` is *sidq* 1 (green paint over a red run). Everything else is still enforced by reading: all of *adab*, the rest of *hikmah* and *sidq*, and *sabr* 1, 2 and 4. Sibling harnesses in this family carry the executable falsifiers for other disciplines.
 - **Stated plainly:** this is a young codex, offered as a standard to hold rather than a finished framework. In the spirit of *sidq*, that is named here rather than dressed up.
 

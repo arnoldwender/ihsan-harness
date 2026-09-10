@@ -1,0 +1,28 @@
+# Verified 2026-09-10 against the full text of Whinfield's second edition on
+# Internet Archive. Whinfield prints it, with the proverb in quotation marks
+# because Rumi is himself quoting one:
+#
+#   Have patience, for "patience is the key of joy."
+#
+# A first pass reported this line ABSENT and was about to record it as a
+# fabricated attribution. It was not absent; the OCR wraps it across a line
+# break and a raw substring search missed it. The re-check with whitespace
+# normalisation found it immediately. That near-miss is why the verifier used
+# for this directory normalises before comparing - a checker whose failure mode
+# is "reports absent when present" is worse than none, because absence is the
+# finding.
+work: "Masnavi i Ma'navi, Book I"
+author: "Jalal ad-Din Muhammad Rumi"
+author_born: 1207
+author_died: 1273
+year: 1273
+edition: "Persian composed c. 1258-1273. English from E. H. Whinfield, Masnavi i Ma'navi - The Spiritual Couplets, second edition, Kegan Paul, Trench, Trubner and Co., London, 1898. The translation is abridged, which Whinfield states on his own title page."
+translator: "E. H. Whinfield"
+translator_died: 1922
+pd_status_us: "Persian original 13th century; the Whinfield translation 1898, before 1930 - public domain."
+pd_status_eu: "Author died 1273. Translator Edward Henry Whinfield died 1922; 1922 + 70 = 1992 - public domain."
+source_url: "https://archive.org/details/masnaviimanavi"
+provenance: verified
+provenance_note: "The words inside the inner quotation marks are a classical Arabic proverb that Rumi quotes, not a sentence he coined. Whinfield marks that with quotation marks and the repo does not, which reads as if the whole line were Rumi's own. The attribution to Rumi and to Whinfield is correct either way; the nuance is recorded here because the repo's own sidq rule is about carrying a word unchanged."
+quotes:
+  - "Have patience, for patience is the key of joy."

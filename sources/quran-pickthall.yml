@@ -1,0 +1,50 @@
+# Seven verses, all in Marmaduke Pickthall's 1930 English, all verified verbatim
+# on 2026-09-10 against the Al Quran Cloud API's `en.pickthall` edition, one
+# request per ayah:
+#
+#   55:60  "Is the reward of goodness aught save goodness?"            verbatim
+#   2:153  "O ye who believe! Seek help in steadfastness and prayer.
+#           Lo! Allah is with the steadfast."                          verbatim
+#   2:269  "He giveth wisdom unto whom He will, and he unto whom wisdom is
+#           given, he truly hath received abundant good."   verbatim, quoted to
+#           the clause break; Pickthall continues "But none remember except men
+#           of understanding."
+#   9:119  "Be careful of your duty to Allah, and be with the truthful." verbatim
+#   20:114 "And say: My Lord! Increase me in knowledge."  verbatim; Pickthall
+#           has a lowercase "and say" mid-verse, capitalised here as a sentence.
+#   39:9   "Are those who know equal with those who know not? But only men of
+#           understanding will pay heed."   verbatim, the closing clause of a
+#           longer verse.
+#   94:5-6 "But lo! with hardship goeth ease. Lo! with hardship goeth ease."
+#           verbatim across the two verses; Pickthall ends v5 with a comma and
+#           v6 with a semicolon, joined here with full stops.
+#
+# Nothing was reworded. Every difference from the printed edition is punctuation
+# at a quotation boundary, and each one is named above rather than smoothed over.
+#
+# author_born / author_died are prose, following the convention this family
+# already uses for anonymous and scriptural texts: within Islam the Qur'an is
+# not a humanly authored work, so there is no birth or death year that could go
+# here without being invented. CHECK 3 skips the author arithmetic on purpose;
+# the translator's dates carry it instead, and those are exact.
+work: "The Meaning of the Glorious Koran - an explanatory translation"
+author: "The Qur'an - Arabic scripture, held within Islam to be revelation rather than a humanly authored work"
+author_born: "not applicable - scripture, no human author to date"
+author_died: "not applicable - scripture, no human author to date"
+year: 1930
+edition: "Marmaduke Pickthall, The Meaning of the Glorious Koran, Alfred A. Knopf, New York, 1930."
+translator: "Marmaduke Pickthall"
+translator_died: 1936
+pd_status_us: "Published 1930. Works first published in 1930 entered the United States public domain on 1 January 2026, so this translation is public domain in the US as of this year and was not before it."
+pd_status_eu: "The Arabic original is scripture and under no copyright. Translator Marmaduke Pickthall died 19 May 1936; 1936 + 70 = 2006, so the English has been public domain in the EU since 1 January 2007."
+source_url: "https://api.alquran.cloud/v1/ayah/55:60/en.pickthall"
+provenance: verified
+provenance_note: "The US status is the narrow one and worth stating plainly: 1930 is the first year of publication NOT covered by the pre-1930 rule this family's gate encodes, and it cleared only on 1 January 2026. Anyone reading this file before that date would have had a different answer. The EU status has been settled since 2007 and is the one that governs where this repo is published from."
+quotes:
+  - "Is the reward of goodness aught save goodness?"
+  - "O ye who believe! Seek help in steadfastness and prayer. Lo! Allah is with the steadfast."
+  - "He giveth wisdom unto whom He will, and he unto whom wisdom is given, he truly hath received abundant good."
+  - "Be careful of your duty to Allah, and be with the truthful."
+  - "And say: My Lord! Increase me in knowledge."
+  - "Are those who know equal with those who know not? But only men of understanding will pay heed."
+  - "But lo! with hardship goeth ease. Lo! with hardship goeth ease."
