@@ -93,12 +93,55 @@ Each session opens with a *first word* — the standard set before the work begi
 
 The full rotation lives in [`PRECEPTS.md`](PRECEPTS.md) and in [`precepts.txt`](precepts.txt), every entry attributed and verified public-domain.
 
+## The gate — [`gate/cheap_rescue.py`](gate/cheap_rescue.py)
+
+This edition carries an executable falsifier for *sabr*, and it is what makes this repo different from its sibling harnesses rather than a reskin of them. **Sabr 3 — "refuse the cheap rescue" — has the falsifier "a test skipped or deleted, or a warning muted, to make a check pass". That is a claim about a diff, so it can be checked by reading one.**
+
+```bash
+python3 gate/cheap_rescue.py                      # diff against origin/main
+python3 gate/cheap_rescue.py --base HEAD~1
+python3 gate/cheap_rescue.py --files src/a.ts
+python3 gate/cheap_rescue.py --sarif cheap-rescue.sarif
+```
+
+Exit `0` clean · `1` findings · `2` the gate itself failed. The third is not decoration: a checker that returns `1` when it crashed reads as "I found something", and one that returns `0` reads as "clean" and fails open — which is the green paint *sidq* forbids, applied by the tool that was supposed to catch it.
+
+| Check | Catches | The form that passes |
+|---|---|---|
+| `ts-suppression` | `@ts-ignore`, `@ts-expect-error` or `@ts-nocheck` with no reason attached | `@ts-expect-error the vendor types omit this field` |
+| `eslint-blanket-disable` | `eslint-disable` or `eslint-disable-next-line` with no rule named | `eslint-disable-next-line no-console -- reason` |
+| `bare-noqa` | `# noqa` with no error code | `# noqa: E501` |
+| `bare-type-ignore` | `# type: ignore` with no code | `# type: ignore[arg-type]` |
+| `skipped-test` | `@pytest.mark.skip`, `@pytest.mark.xfail`, `it.skip`, `test.skip`, `describe.skip`, `test.todo`, `xit(`, `xdescribe(` | `@pytest.mark.skipif(cond, reason=…)`, which states its condition — or an allowlist entry |
+| `ci-continue-on-error` | `continue-on-error: true` in a CI workflow | remove it, or fix the step it is hiding |
+| `no-verify` | `--no-verify` — which disables the whole hook chain, not the hook that objected | diagnose what the hook caught |
+| `force-push` | `--force` or `-f` on a `push` | `--force-with-lease`, which refuses when the remote moved |
+| `swallowed-error` | `except: pass`, an empty `catch {}`, a handler holding only a comment | log it, re-raise it, or narrow the `except` |
+
+### Why it reads the diff and not the tree
+
+Only **added lines** are in scope. Auditing every file would turn any inherited repo into a wall of red on day one, and a gate nobody can ever get to green is a gate that gets deleted in a week — which leaves the real defect unwatched. What you added is yours; what you found is not yet your debt. Deleted lines never appear at all: removing an `@ts-ignore` is the opposite of a cheap rescue.
+
+Prose is never scanned. A README that documents `# noqa` is not a repo that suppresses a linter, and a gate that cannot tell the two apart teaches its users to ignore it — so `.md`, `.txt` and JSON are out of scope, and only code and CI configuration are read.
+
+### Why every token has a form that passes
+
+Each of these is legitimate somewhere. That is exactly why they are worth a gate rather than a ban: the difference between craft and cowardice is whether the suppression carries its reason. The gate does not ask *is the token present*; it asks *did the author say why* — a rule name on the disable, an error code on the `noqa`, a sentence on the `@ts-expect-error`, a log line inside the handler.
+
+Where no such form exists — a blanket skipped test — [`.conduct/cheap-rescue-allow.txt`](.conduct/cheap-rescue-allow.txt) takes the justified case by name: one regex per line, matched against the path or the offending line. A malformed entry there is exit `2`, never a warning, because a gate running on a config it could not parse does not know what it is exempting.
+
+That file is also this repo's own demonstration. The gate quotes every token it hunts — in its docstring, and in tests that plant them on purpose — so without those two allowlist entries it reports **55 findings against itself** on the very commit that adds it. Verified by deleting the file and running it.
+
+[`tests/test_cheap_rescue.py`](tests/test_cheap_rescue.py) gives every check both halves: the defect, which must exit `1`, and the justified form, which must exit `0`. [`tests/mutation_check.py`](tests/mutation_check.py) then removes each check in turn and requires the suite to go red — a test that still passes with the mechanism deleted is decoration that reports green forever, which is the very thing being gated.
+
 ## Status
 
 Early, but real.
 
 - **Written and stable:** the four disciplines, their rules, and every falsifier ([CODEX.md](CODEX.md)); the precedence order; this README.
 - **Shipping:** the wiring — the session-start hook and the *first word* precept rotation ([PRECEPTS.md](PRECEPTS.md)).
+- **Automated:** the cheap-rescue gate, in CI on every push, with a mutation check behind it.
+- **Reported straight, as *sidq* demands:** **one of the four disciplines has an executable falsifier; three do not.** The gate covers *sabr* 3 in full, and clips the edge of two neighbours — a force push is *hikmah* 2 (minimum force), `continue-on-error: true` is *sidq* 1 (green paint over a red run). Everything else is still enforced by reading: all of *adab*, the rest of *hikmah* and *sidq*, and *sabr* 1, 2 and 4. Sibling harnesses in this family carry the executable falsifiers for other disciplines.
 - **Stated plainly:** this is a young codex, offered as a standard to hold rather than a finished framework. In the spirit of *sidq*, that is named here rather than dressed up.
 
 ## License
