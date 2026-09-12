@@ -60,9 +60,12 @@ jobs:
         # Runs on every event, unlike the cheap-rescue gate above. That one reads
         # a diff and has nothing to say when there is none; this one reads the
         # whole tree, so its verdict means the same thing however it was invoked.
-        # PyYAML is deliberately NOT installed: the gate carries a fallback
-        # parser for exactly this container, and running it here is what keeps
-        # that path from rotting unnoticed.
+        # PyYAML is deliberately NOT installed, and there is no fallback to keep
+        # from rotting: the gate parses sources/*.yml with a parser it ships
+        # itself, in every environment. It used to prefer PyYAML when installed,
+        # which meant six of the ten editions checked their sources against a
+        # parser that accepts more than the four remaining ones do — same gate,
+        # same file, different answer. That branch is gone.
         run: python3 gate/citations.py --sarif citations.sarif
 
       - name: Citation gate, online (manual runs only)
