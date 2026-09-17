@@ -77,6 +77,10 @@ The codex is meant to sit **in context while the agent works** — not consulted
 
 - **Paste the block.** Drop the contents of [`codex-block.md`](codex-block.md) into the instructions your agent already reads — `AGENTS.md`, `CLAUDE.md`, a system prompt, whatever your harness loads. It is the single source the hook and your agent file share.
 - **Or wire the hook.** [`hooks/session-start.sh`](hooks/session-start.sh) emits the first word and the conduct block at the top of every session, unprompted — the character is present before the first tool call, not recalled after the first slip. See [hooks/](hooks/).
+- **Or install it as an Agent Skill.** [`SKILL.md`](SKILL.md) packages the same block in the
+  [Agent Skills](https://agentskills.io/specification) format: clone this repository into your
+  agent's skills directory as `ihsan-harness/` (the directory name must match the skill name).
+  Verified on Claude Code 2.1.273 (2026-09-17); other hosts that read the format were not run.
 - **Always active; intensity scales with the stakes.** A one-line fix and a week-long migration draw on the same disciplines at different volume — a typo fix still gets *sidq* in its report and *adab* in its diff; a migration adds the full weight of *hikmah* and *sabr*. Nothing switches the codex on or off; the work only turns it up.
 
 ## The first word
