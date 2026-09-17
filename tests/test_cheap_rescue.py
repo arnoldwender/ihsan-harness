@@ -380,6 +380,25 @@ def test_force_that_is_not_a_push_is_not_a_force_push(repo: Path) -> None:
     assert r.returncode == 0, r.stdout
 
 
+def test_a_push_that_is_not_git_is_not_a_force_push(repo: Path) -> None:
+    """`drizzle-kit push --force` pushes a schema and rewrites no history. It was
+    the one false positive the live hook's measurement over real sessions found."""
+    append(repo, "scripts/deploy.sh", """
+        npx drizzle-kit push --force
+        """)
+    r = run(repo)
+    assert r.returncode == 0, r.stdout
+
+
+def test_git_options_before_push_are_still_a_git_push(repo: Path) -> None:
+    append(repo, "scripts/deploy.sh", """
+        git -C /srv/app push -f origin main
+        """)
+    r = run(repo)
+    assert r.returncode == 1, r.stdout
+    assert "force-push" in r.stdout
+
+
 # --- CHECK 7: swallowed errors -----------------------------------------------
 
 def test_except_pass_is_caught(repo: Path) -> None:

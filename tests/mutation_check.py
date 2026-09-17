@@ -38,6 +38,11 @@ MUTANTS = [
     ("CHECK 5 ci-continue-on-error", "    check_ci_continue_on_error,\n"),
     ("CHECK 6 no-verify / force-push", "    check_git_escape_hatches,\n"),
     ("CHECK 7 swallowed-error", "    check_swallowed_errors,\n"),
+    # A false-positive guard is a mechanism too. Strip the `git` anchor from the
+    # force-push pattern and the bare word `push` is enough again - the shape
+    # (`drizzle-kit push --force`) the live measurement over real sessions found.
+    ("CHECK 6 anchors the force push on git, not on the word push",
+     r"(?<![\w-])git\b[^;&|]*?"),
 ]
 
 
