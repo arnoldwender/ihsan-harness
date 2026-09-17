@@ -457,7 +457,11 @@ def check_ci_continue_on_error(targets: list[Target], findings: list[Finding]) -
 # --- CHECK 6: bypassing the local gates --------------------------------------
 
 NO_VERIFY = re.compile(r"--no-verify\b")
-PUSH_WORD = re.compile(r"(?<![\w-])push\b")
+# A `git … push` on the line, options between allowed, nothing that starts a
+# new command. The word `push` alone is not enough: `drizzle-kit push --force`
+# pushes a schema and rewrites no history - the one false positive the live
+# hook's measurement over 27,423 real shell calls turned up.
+GIT_PUSH = re.compile(r"(?<![\w-])git\b[^;&|]*?(?<![\w-])push\b")
 FORCE_FLAG = re.compile(r"(?<![\w-])(?:--force(?!-with-lease|-if-includes)|-f)(?![\w-])")
 
 
@@ -466,9 +470,10 @@ def check_git_escape_hatches(targets: list[Target], findings: list[Finding]) -> 
 
     `--no-verify` does not disable one hook; it disables the whole chain, secret
     scan included, and it is reached for precisely when a hook has just said no.
-    `--force` on a push overwrites whatever someone else pushed while you were
-    working. `--force-with-lease` refuses when the remote moved, which is the
-    same operation with the accident removed - so it passes here.
+    `--force` on a `git push` overwrites whatever someone else pushed while you
+    were working. `--force-with-lease` refuses when the remote moved, which is
+    the same operation with the accident removed - so it passes here. Another
+    tool's `push --force` is another tool's business.
     """
     for t in targets:
         for n, line in scan(t):
@@ -478,7 +483,7 @@ def check_git_escape_hatches(targets: list[Target], findings: list[Finding]) -> 
                     "--no-verify disables the entire hook chain, not the one hook that "
                     "objected - diagnose what the hook caught instead",
                     t.path, n, line.strip()))
-            m = PUSH_WORD.search(line)
+            m = GIT_PUSH.search(line)
             if m and FORCE_FLAG.search(line, m.end()):
                 findings.append(Finding(
                     "force-push",

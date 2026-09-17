@@ -22,3 +22,11 @@
 # never to `gate/` or `tests/` wholesale.
 ^gate/cheap_rescue\.py$
 ^tests/test_cheap_rescue\.py$
+
+# The live hook and its suite are here for the same reason: the hook's header
+# names the tokens it hands the gate, and its tests plant each one in a scratch
+# repository to prove the warning fires. Same scoping — two exact paths, never
+# `hooks/` or `tests/` wholesale. The hook's mutation runner is NOT listed: it
+# quotes no token and must keep passing the gate on its own.
+^hooks/cheap-rescue-before-run\.py$
+^tests/test_cheap_rescue_hook\.py$
